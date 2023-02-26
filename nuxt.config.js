@@ -1,14 +1,14 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'test01',
+    title: 'Nuxt Shopping',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'ko',
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'Nuxt Shopping~' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
@@ -47,5 +47,13 @@ export default {
   // server setup
   server: {
     port: process.env.NODE_ENV === 'production' ? null : 3001, // default: 3000
+  },
+
+  // env setup
+  env: {
+    baseUrl:
+      process.env.NODE_ENV === 'production'
+        ? 'https://my-json-server.typicode.com/lafin716/nuxt-shopping-fake-api'
+        : 'http://localhost:3000',
   },
 }

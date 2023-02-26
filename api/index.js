@@ -1,11 +1,11 @@
 import axios from 'axios'
 
 const products = axios.create({
-  baseURL: 'http://localhost:3000/products',
+  baseURL: process.env.baseUrl + '/products',
 })
 
 const carts = axios.create({
-  baseURL: 'http://localhost:3000/carts',
+  baseURL: process.env.baseUrl + '/carts',
 })
 
 function fetchProducts() {
