@@ -47,5 +47,5 @@ export default {
   // server setup
   server: {
     port: 3001, // default: 3000
-  }
+  },
 }
